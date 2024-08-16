@@ -34,6 +34,10 @@ app.post("/sendFunds", (req, res)=>{
 
 })
 
+app.get("/working", (req, res)=>{
+    res.send("working")
+})
+
 
 server.listen(process.env.PORT, () => {
     console.log("Connected to DB and Server is Running");
