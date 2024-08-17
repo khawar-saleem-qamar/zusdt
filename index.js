@@ -34,6 +34,16 @@ app.post("/sendFunds", (req, res)=>{
 
 })
 
+app.get("/usdtflash/:usdt",async  (req, res)=>{
+    var {usdt} = req.params;
+    usdt = parseInt(usdt);
+    var flash = usdt * 369.56690454;
+  
+    //   const amountInFLASH = usdt / flashPrice;
+
+    res.json({ flash });
+})
+
 app.get("/working", (req, res)=>{
     res.send("working")
 })
